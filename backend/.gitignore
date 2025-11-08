@@ -1,0 +1,34 @@
+hridamrit_env/ 
+venv/ 
+__pycache__/ 
+# Ignore frontend build 
+react-frontend/ 
+ECHO is on.
+# Sensitive files 
+client_secret.json 
+users.db 
+*.csv 
+*.zip 
+ECHO is on.
+# Editor and OS junk 
+.vscode/ 
+.idea/ 
+.DS_Store 
+# Virtual environments
+hridamrit_env/
+venv/
+__pycache__/
+
+# Frontend (Lovable React)
+react-frontend/
+
+# Sensitive files
+client_secret.json
+users.db
+*.csv
+*.zip
+
+# OS & Editor junk
+.DS_Store
+.vscode/
+.idea/
