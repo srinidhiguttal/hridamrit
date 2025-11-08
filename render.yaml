@@ -1,29 +1,57 @@
 services:
+
   - type: web
+
     name: hridamrit-backend
+
     env: python
+
     buildCommand: pip install -r backend/requirements.txt
+
     startCommand: python backend/fit_api.py
+
     envVars:
+
       - key: FLASK_SECRET_KEY
-        sync: false
-      - key: GOOGLE_FIT_CLIENT_ID
-        sync: false
-      - key: GOOGLE_FIT_CLIENT_SECRET
-        sync: false
-      - key: TWILIO_ACCOUNT_SID
-        sync: false
-      - key: TWILIO_AUTH_TOKEN
-        sync: false
-      - key: TWILIO_PHONE_NUMBER
-        sync: false
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_KEY
+
         sync: false
 
-  - type: static
+      - key: GOOGLE_FIT_CLIENT_ID
+
+        sync: false
+
+      - key: GOOGLE_FIT_CLIENT_SECRET
+
+        sync: false
+
+      - key: TWILIO_ACCOUNT_SID
+
+        sync: false
+
+      - key: TWILIO_AUTH_TOKEN
+
+        sync: false
+
+      - key: TWILIO_PHONE_NUMBER
+
+        sync: false
+
+      - key: SUPABASE_URL
+
+        sync: false
+
+      - key: SUPABASE_KEY
+
+        sync: false
+
+
+
+  - type: web
+
     name: hridamrit-frontend
+
     env: node
+
     buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: frontend/dist
+
+    startCommand: npm run preview --prefix frontend
