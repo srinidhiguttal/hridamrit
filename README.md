@@ -28,4 +28,4 @@ The system uses a trained **LightGBM model** to estimate heart risk percentage a
 
 ---
 
-## 🧩 Project Structure
+
